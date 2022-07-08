@@ -1,0 +1,53 @@
+.programa{
+    width: 50rem;
+    height: 50rem;
+    border: 2px solid black;
+
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 10rem;
+}
+
+.programa_cj-titulo{
+    width: 30rem;
+    height: 5rem;
+    border: 1px solid black;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.programa_cj-titulo span {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.Botones{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.programa_bt{
+    width: 15rem;
+    height: 5rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: green;
+    margin-top: 10rem;
+    font-size: 2rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.programa_bt:hover{
+    background-color: red;
+    transition: 0.5s;
+    cursor: pointer;
+}
