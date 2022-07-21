@@ -8,3 +8,10 @@ html {
     font-size: 10px;
     font-family: sans-serif;
 }
+
+.seccion {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 5rem;
+}

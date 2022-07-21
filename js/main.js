@@ -1,3 +1,6 @@
+import { user_ob } from "./user.js";
+
+//DATA
 export let user = [
     //user_id	username	password	full_name	address	email	phone
   
@@ -16,6 +19,10 @@ export let user = [
   let caja_texto = document.querySelector('#cj-titulo_texto'); //Agrega o quitar contenido del DOM
   let bt_siguiente = document.querySelector('#bt_siguiente');
   let bt_anterior = document.querySelector('#bt_anterior');
+  let bt_ver = document.querySelector('#bt_ver');
+
+  // Elementos de funciones del DOM
+  let root = document.querySelector("#root");
   
 //Primer elemento
 let usuario=0;
@@ -23,7 +30,7 @@ caja_texto.innerHTML = user[usuario][1];
 
 //FUNCION SIGUIENTE
 function siguiente(){
-  if(usuario<=6){
+  if(usuario<=5){
     usuario++;
     caja_texto.innerHTML = user[usuario][1];
   }
@@ -42,3 +49,19 @@ function anterior(){
 }
 
 bt_anterior.addEventListener('click',anterior);//<--Boton
+
+//FUNCTION VER
+function ver(){
+
+  root.innerHTML ='<h1 class="estilo">' +'DATOS DEL USUARIO'+ '</h1>'+ 
+                  '<table border="1" class="tabla1">'+
+                    '<tr>'+'<th>'+'ID'+'</th>' +'<td>'+user_ob[usuario].id+ '</td>'+ '</tr>'+
+                    '<tr>'+'<th>'+'Nikname'+'</th>' +'<td>'+user_ob[usuario].nikname+ '</td>'+ '</tr>'+
+                    '<tr>'+'<th>'+'Name'+'</th>' +'<td>'+user_ob[usuario].name+ '</td>'+ '</tr>'+
+                    '<tr>'+'<th>'+'Adress'+'</th>' +'<td>'+user_ob[usuario].adress+ '</td>'+ '</tr>'+
+                    '<tr>'+'<th>'+'E-mail'+'</th>' +'<td>'+user_ob[usuario].email+ '</td>'+ '</tr>'+
+                    '<tr>'+'<th>'+'Phone'+'</th>' +'<td>'+user_ob[usuario].phone+ '</td>'+ '</tr>'+    
+                  '</table';
+}
+
+bt_ver.addEventListener('click',ver);
